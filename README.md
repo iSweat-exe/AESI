@@ -24,3 +24,14 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
    ```bash
    git clone https://github.com/isweat-exe/AESI.git
    ```
+
+## Configuration
+
+Add .env file in AESI folder, and type this :
+```
+DISCORD_TOKEN = <Bot Token>
+GUILD_ID = <Your Server ID>
+CLIENT_ID = <Your bot ID>
+
+MONGODB_SRV = <Your URL connect - MongoDB> 
+```
