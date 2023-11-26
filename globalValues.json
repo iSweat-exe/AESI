@@ -1,4 +1,5 @@
 {
     "dailyMin": 1,
-    "dailyMax": 1000
+    "dailyMax": 1000,
+    "coinflipReward": 100
 }

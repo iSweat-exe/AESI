@@ -5,6 +5,7 @@ const profileSchema = new mongoose.Schema({
   serverId: { type: String, required: true },
   balance: { type: Number, default: 250 },
   dailyLastUsed: { type: Number, default: 0 },
+  coinflipLastUsed: { type: Number, default: 0 },
 });
 
 const model = mongoose.model("aesidb", profileSchema);
