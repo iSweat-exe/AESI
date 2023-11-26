@@ -15,7 +15,7 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
 - `/daily` : Redeem your daily reward.
 - `/play [game]` : Play one of the available mini-games.
 - `/balance` : Check your current balance.
-- `/report type:[bug|other] commentaire:[your_comment]` : Report bugs or provide feedback.
+- `/donate @username <amount>` : Donate commands
 
 ## Installation
 
@@ -27,7 +27,7 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
 
 ## Configuration
 
-Add .env file in AESI folder, and type this :
+Add .env file in AESI folder, and copy this :
 ```env
 DISCORD_TOKEN = <Bot Token>
 GUILD_ID = <Your Server ID>
