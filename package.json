@@ -1,0 +1,17 @@
+{
+  "name": "aesi",
+  "version": "1.0.0",
+  "description": "AESI Discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "iSweat (isweat-exe)",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0"
+  }
+}
