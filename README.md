@@ -28,7 +28,7 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
 ## Configuration
 
 Add .env file in AESI folder, and type this :
-```
+```env
 DISCORD_TOKEN = <Bot Token>
 GUILD_ID = <Your Server ID>
 CLIENT_ID = <Your bot ID>
