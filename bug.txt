@@ -1,0 +1,11 @@
+/donate @username <amout> :
+ Possibilité de donné de l'argent en negatif se qui permet de volé de l'argent a qqn
+
+/daily :
+ Aucun bug trouvé pour le moment...
+
+/daily-realtime :
+ Aucun bug trouvé pour le moment...
+
+/balance :
+ Aucun bug trouvé pour le moment...
