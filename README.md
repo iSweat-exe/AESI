@@ -13,7 +13,6 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
 ## Commands
 
 - `/daily` : Redeem your daily reward.
-- `/play [game]` : Play one of the available mini-games.
 - `/balance` : Check your current balance.
 - `/donate @username <amount>` : Donate commands
 
