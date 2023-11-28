@@ -65,17 +65,6 @@ module.exports = {
         `Winner ! You won ${coinflipReward} coins with **${choice}**`
       );
     } else {
-      await profileModel.findOneAndUpdate(
-        {
-          userId: id,
-        },
-        {
-          $inc: {
-            balance: -coinflipReward,
-          },
-        }
-      );
-
       await interaction.editReply(
         `Lost... You lost ${coinflipReward} coins with **${choice}**`
       );
