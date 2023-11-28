@@ -74,14 +74,14 @@ module.exports = {
         .setColor(0x00ff00)
         .setTitle("Slot machine result : **You WIN !**")
         .setDescription(
-          `**Jackpot!**\n${result.join(" ")}\nYou **won +${amount} coins**.`
+          `**Jackpot!**\n\n${result.join(" ")}\n\nYou **won +${amount} coins**.`
         );
     } else {
       machineEmbed
         .setColor(0xff0000)
         .setTitle("Slot machine result : **You LOST !**")
         .setDescription(
-          `**No luck...**\n${result.join(" ")}\nYou **lost ${amount} coins**.`
+          `**No luck...**\n\n${result.join(" ")}\n\nYou **lost ${amount} coins**.`
         );
     }
 
