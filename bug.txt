@@ -34,3 +34,8 @@ https://discord.com/developers/active-developer
 
 /balance :
  Aucun bug trouvé pour le moment...
+
+Autre:
+
+Quand un utilisateur quitte le serveur par n'importe quelle moyen (Ban, Kick, Quit etc..) ses information reste dans la base données se qui
+fait buggé des commande comme /leaderboard car elle ne trouve plus l'utilisateur dans le serveur alors qu'il et encore dans la BDD
