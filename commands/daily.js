@@ -15,14 +15,13 @@ module.exports = {
     const timeLeft = cooldown - (Date.now() - dailyLastUsed);
 
     if (timeLeft > 0) {
-      await interaction.deferReply({ ephemeral: true });
       const { hours, minutes, seconds } = parseMilliseconds(timeLeft);
-      await interaction.editReply(
-        `You can get your daily reward again in ${hours} hrs ${minutes} mim ${seconds} sec.`
-      );
+      await interaction.reply({
+        content: `You can get your daily reward again in ${hours} hrs ${minutes} min ${seconds} sec.`,
+        ephemeral: true,
+      });
+      return;
     }
-
-    await interaction.deferReply();
 
     const randomAmt = Math.floor(
       Math.random() * (dailyMax - dailyMin + 1) + dailyMin
@@ -44,8 +43,9 @@ module.exports = {
       console.log(err);
     }
 
-    await interaction.editReply(
-      `You have received ${randomAmt} coins!`
-    )
+    await interaction.reply({
+      content: `You have received ${randomAmt} coins!`,
+      ephemeral: true,
+    });
   },
 };
