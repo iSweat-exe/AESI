@@ -3,12 +3,33 @@ https://discord.com/developers/active-developer
 
 
 /donate @username <amout> :
- Possibilité de donné de l'argent en negatif se qui permet de volé de l'argent a qqn
+ Aucun bug trouvé pour le moment...
 
 /daily :
  Aucun bug trouvé pour le moment...
 
 /daily-realtime :
+ Aucun bug trouvé pour le moment...
+
+/balance :
+ Aucun bug trouvé pour le moment...
+
+/report :
+ Aucun bug trouvé pour le moment...
+
+/help :
+ Aucun bug trouvé pour le moment...
+
+/leaderboard :
+ Aucun bug trouvé pour le moment...
+
+/coinflip :
+ Aucun bug trouvé pour le moment...
+
+/machine :
+ Aucun bug trouvé pour le moment...
+
+/admin :
  Aucun bug trouvé pour le moment...
 
 /balance :

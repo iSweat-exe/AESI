@@ -1,6 +1,0 @@
-dans la commande /machine je voudrais :
-Syntaxe : /machine <amount>
-
-une fois la commande executer par l'utilisateur 3 emoji sont tirer au sort si les 3 emoji sont les meme alors la mise ( <amount> ) et doublé, si l'utilisateur perd alors le <amout> et retirer de sont argent
-
-a tu des question, sinon code cette commande avec cette exemple de commande /<commands> :
