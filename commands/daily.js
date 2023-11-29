@@ -6,7 +6,7 @@ const { dailyMin, dailyMax } = require("../globalValues.json");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("daily")
-    .setDescription("Redeems your daily reward."),
+    .setDescription("Échange votre récompense quotidienne."),
   async execute(interaction, profileData) {
     const { id } = interaction.user;
     const { dailyLastUsed } = profileData;
@@ -17,7 +17,7 @@ module.exports = {
     if (timeLeft > 0) {
       const { hours, minutes, seconds } = parseMilliseconds(timeLeft);
       await interaction.reply({
-        content: `You can get your daily reward again in ${hours} hrs ${minutes} min ${seconds} sec.`,
+        content: `Vous pouvez à nouveau obtenir votre récompense quotidienne dans ${hours} heures ${minutes} min ${seconds} sec.`,
         ephemeral: true,
       });
       return;
@@ -44,7 +44,7 @@ module.exports = {
     }
 
     await interaction.reply({
-      content: `You have received ${randomAmt} coins!`,
+      content: `Vous avez reçu ${randomAmt} pièces !`,
       ephemeral: true,
     });
   },

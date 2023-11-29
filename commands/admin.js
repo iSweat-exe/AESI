@@ -4,22 +4,22 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("admin")
-    .setDescription("Acces to all the admin commands")
+    .setDescription("Accès à toutes les commandes d'administration")
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator)
     .addSubcommand((subcommand) =>
       subcommand
         .setName("add")
-        .setDescription("Add coins to a user balance")
+        .setDescription("Ajouter des pièces au solde d'un utilisateur")
         .addUserOption((option) =>
           option
             .setName("user")
-            .setDescription("The user you want to add coins to")
+            .setDescription("L'utilisateur auquel vous souhaitez ajouter des pièces")
             .setRequired(true)
         )
         .addIntegerOption((option) =>
           option
             .setName("amount")
-            .setDescription("The amount of coins to add")
+            .setDescription("Le nombre de pièces à ajouter")
             .setRequired(true)
             .setMinValue(1)
         )
@@ -27,17 +27,17 @@ module.exports = {
     .addSubcommand((subcommand) =>
       subcommand
         .setName("subtract")
-        .setDescription("Subtract coins to a user balance")
+        .setDescription("Soustraire des pièces au solde d'un utilisateur")
         .addUserOption((option) =>
           option
             .setName("user")
-            .setDescription("The user you want to subtract coins to")
+            .setDescription("L'utilisateur à qui vous souhaitez soustraire des pièces")
             .setRequired(true)
         )
         .addIntegerOption((option) =>
           option
             .setName("amount")
-            .setDescription("The amount of coins to subtract")
+            .setDescription("La quantité de pièces à soustraire")
             .setRequired(true)
             .setMinValue(1)
         )
@@ -62,7 +62,7 @@ module.exports = {
       );
 
       await interaction.editReply(
-        `Added ${amount} coins to ${user.username}'s balance`
+        `Ajout de ${amount} pièces au solde de ${user.username}`
       )
     }
 
@@ -82,7 +82,7 @@ module.exports = {
       );
 
       await interaction.editReply(
-        `Subtracted ${amount} coins from ${user.username}'s balance`
+        `Soustraction de ${amount} pièces de ${user.username}'s balance`
       )
     }
   },

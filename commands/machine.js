@@ -16,11 +16,11 @@ function generateResult(probability, emojis) {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("machine")
-    .setDescription("Play the slot machine")
+    .setDescription("Jouer à la machine à sous")
     .addIntegerOption((option) =>
       option
         .setName("amount")
-        .setDescription("Amount of coins to bet")
+        .setDescription("Quantité de pièces à parier")
         .setRequired(true)
     ),
   async execute(interaction, profileData) {
@@ -30,7 +30,7 @@ module.exports = {
     const amount = interaction.options.getInteger("amount");
 
     if (amount <= 0 || amount > balance) {
-      return await interaction.reply("Invalid amount of coins.");
+      return await interaction.reply("Quantité de pièces invalide.");
     }
 
     await interaction.deferReply();
@@ -73,16 +73,16 @@ module.exports = {
 
       machineEmbed
         .setColor(0x00ff00)
-        .setTitle("Slot machine result : **You WIN !**")
+        .setTitle("Résultat machine à sous : **Vous GAGNEZ !**")
         .setDescription(
-          `**Jackpot!**\n\n${result.join(" ")}\n\nYou **won +${amount} coins**.`
+          `**Jackpot !**\n\n${result.join(" ")}\n\nVous **avez gagné +${montant} pièces**.`
         );
     } else {
       machineEmbed
         .setColor(0xff0000)
-        .setTitle("Slot machine result : **You LOST !**")
+        .setTitle("Résultat machine à sous : **Vous avez PERDU !**")
         .setDescription(
-          `**No luck...**\n\n${result.join(" ")}\n\nYou **lost ${amount} coins**.`
+          `**Pas de chance...**\n\n${result.join(" ")}\n\nVous avez **perdu ${amount} pièces**.`
         );
     }
 

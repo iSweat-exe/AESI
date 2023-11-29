@@ -6,15 +6,15 @@ const parseMilliseconds = require("parse-ms-2");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("coinflip")
-    .setDescription("Flip a coin for a free bonus")
+    .setDescription("Lancez une pièce pour un bonus gratuit")
     .addStringOption((option) =>
       option
         .setName("choice")
-        .setDescription("Heads or tails")
+        .setDescription("Pile ou face")
         .setRequired(true)
         .addChoices(
-          { name: "Heads", value: "Heads" },
-          { name: "Tails", value: "Tails" }
+          { name: "Pile", value: "Pile" },
+          { name: "Face", value: "Face" }
         )
     ),
   async execute(interaction, profileData) {
@@ -28,7 +28,7 @@ module.exports = {
       await interaction.deferReply({ ephemeral: true });
       let { minutes, seconds } = parseMilliseconds(timeLeft);
       return await interaction.editReply(
-        `You can flip again in ${minutes} min ${seconds} sec.`
+        `Vous pouvez lancer à nouveau une pièce dans ${minutes} min ${seconds} sec.`
       );
     }
 
@@ -46,7 +46,7 @@ module.exports = {
     );
 
     const randomNum = Math.round(Math.random()); // between 0 and 1
-    const result = randomNum ? "Heads" : "Tails";
+    const result = randomNum ? "Pile" : "Face";
     const choice = interaction.options.getString("choice");
 
     if (choice === result) {
@@ -62,11 +62,11 @@ module.exports = {
       );
 
       await interaction.editReply(
-        `Winner ! You won ${coinflipReward} coins with **${choice}**`
+        `Gagnant ! Vous avez gagné ${coinflipReward} pièces avec **${choice}**`
       );
     } else {
       await interaction.editReply(
-        `Lost... You lost ${coinflipReward} coins with **${choice}**`
+        `Perdu... Vous avez perdu ${coinflipReward} pièces avec **${choice}**`
       );
     }
   },

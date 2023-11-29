@@ -17,7 +17,7 @@ function generateResult(probability, emojis) {
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("scratch")
-    .setDescription("Price : 500 Coins"),
+    .setDescription("Prix : 500 Coins"),
   async execute(interaction, profileData) {
     const { id } = interaction.user;
     const { totalSpent, balance } = profileData;
@@ -26,7 +26,7 @@ module.exports = {
     const amount = globalValues.fixedAmount;
 
     if (amount <= 0 || amount > balance) {
-      return await interaction.reply("Invalid amount of coins.");
+      return await interaction.reply("Quantité de pièces invalide.");
     }
 
     await interaction.deferReply();
@@ -66,20 +66,20 @@ module.exports = {
 
       machineEmbed
         .setColor(0x0000ff)
-        .setTitle("**🎟️ Scratch Games 🎟️**")
+        .setTitle("**🎟️ Jeux à gratter 🎟️**")
         .setDescription(
-          `**Click on the ||*Exemple*|| for view the result**\n\n${result.join(
+          `**Cliquez sur ||*Exemple*|| pour voir le résultat**\n\n${result.join(
             " "
-          )}\n\n||You win .||`
+          )}\n\n||Vous gagnez .||`
         );
     } else {
       machineEmbed
         .setColor(0x0000ff)
         .setTitle("**🎟️ Scratch Games 🎟️**")
         .setDescription(
-          `**Click on the ||*Exemple*|| for view the result**\n\n${result.join(
+          `**Cliquez sur ||*Exemple*|| pour voir le résultat**\n\n${result.join(
             " "
-          )}\n\n||You lost.||`
+          )}\n\n||Vous avez perdu.||`
         );
     }
 

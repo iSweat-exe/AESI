@@ -5,7 +5,7 @@ const profileModel = require("../models/profileSchema.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("leaderboard")
-    .setDescription("Shows the top 10 coins earners."),
+    .setDescription("Affiche les 10 plus riche du serveur."),
   async execute(interaction, profileData) {
     await interaction.deferReply();
 
@@ -13,9 +13,9 @@ module.exports = {
     const { balance } = profileData;
 
     let leaderboardEmbed = new EmbedBuilder()
-      .setTitle("**Top 10 coins earners**")
+      .setTitle("**Top 10 des plus riches**")
       .setColor(0x45d6fd)
-      .setFooter({ text: `Your are not ranked yet` });
+      .setFooter({ text: `Vous n'êtes pas encore classé` });
 
     const members = await profileModel
       .find()
@@ -25,7 +25,7 @@ module.exports = {
     const memberIdx = members.findIndex((member) => member.userId === id);
 
     leaderboardEmbed.setFooter({
-      text: `${username}, you're rank #${memberIdx + 1} with ${balance}`,
+      text: `${username}, vous êtes au rang #${memberIdx + 1} avec ${balance} pieces`,
     });
 
     const topTen = members.slice(0, 10);
@@ -46,7 +46,7 @@ module.exports = {
 
       let user = member.user;
       let userBalance = topTen[i].balance;
-      desc += `**${i + 1} ${user.username}:** ${userBalance} coins\n`;
+      desc += `**${i + 1} ${user.username}:** ${userBalance} pieces\n`;
     }
 
     if (desc !== "") {

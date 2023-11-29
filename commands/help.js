@@ -4,44 +4,44 @@ const { EmbedBuilder } = require("@discordjs/builders");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("help")
-    .setDescription("Displays all available commands."),
+    .setDescription("Affiche toutes les commandes disponibles."),
   async execute(interaction) {
     const commands = [
       {
         name: "/balance",
-        description: "Check your balance.",
+        description: "Vérifiez votre solde.",
       },
       {
         name: "/machine",
-        description: "Play the slot machine.",
+        description: "Jouez à la machine à sous.",
       },
       {
         name: "/coinflip",
-        description: "Flip a coin.",
+        description: "Lancer une pièce.",
       },
       {
         name: "/leaderboard",
-        description: "Shows the top 10 coins earners.",
+        description: "Affiche les 10 plus riche du serveur.",
       },
       {
         name: "/help",
-        description: "Displays all available commands.",
+        description: "Affiche toutes les commandes disponibles.",
       },
       {
         name: "/daily",
-        description: "Claim your daily reward.",
+        description: "Réclamez votre récompense quotidienne.",
       },
       {
         name: "/donate",
-        description: "Donate to a user.",
+        description: "Don à un utilisateur.",
       },
       // Ajoutez d'autres commandes ici
     ];
 
     const embed = new EmbedBuilder()
-      .setTitle("Available Commands")
+      .setTitle("Commandes disponibles")
       .setColor(0x45d6fd)
-      .setDescription("Here is a list of all available commands:");
+      .setDescription("Voici une liste de toutes les commandes disponibles :");
 
     commands.forEach((command) => {
       embed.addFields({

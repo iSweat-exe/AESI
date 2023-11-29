@@ -20,9 +20,9 @@ module.exports = {
     const totalMoney = totalMoneyInCirculation.length > 0 ? totalMoneyInCirculation[0].total : 0;
 
     let statsEmbed = new EmbedBuilder()
-      .setTitle("**Your Statistics**")
+      .setTitle("**Vos statistiques**")
       .setColor(0x45d6fd)
-      .setDescription(`**Your Balance:** ${balance} coins\n**Total Money in Circulation:** ${totalMoney} coins\n**Total Money Spent:** ${totalSpent} coins\n**Total Money Since Account Creation:** ${balance + totalSpent} coins`)
+      .setDescription(`**Votre solde :** ${balance} pièces\n**Argent total en circulation :** ${totalMoney} pièces\n**Argent total dépensé :** ${totalSpent} pièces\n**Argent total depuis Création de compte :** ${balance + totalSpent} pièces`)
       .setFooter({ text: `You can check more stats in the future!` });
 
     await interaction.editReply({ embeds: [statsEmbed] });

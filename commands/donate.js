@@ -4,17 +4,17 @@ const profileModel = require("../models/profileSchema");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("donate")
-    .setDescription("Donate your coins to another user")
+    .setDescription("Faites don de vos pièces à un autre utilisateur")
     .addUserOption((option) =>
       option
         .setName("user")
-        .setDescription("The user you want to donate to")
+        .setDescription("L'utilisateur à qui vous souhaitez faire un don")
         .setRequired(true)
     )
     .addIntegerOption((option) =>
       option
         .setName("amount")
-        .setDescription("The amount of coins you want to donate")
+        .setDescription("Le montant des pièces que vous souhaitez donner")
         .setRequired(true)
         .setMinValue(1)
     ),
@@ -27,7 +27,7 @@ module.exports = {
     if (balance < donateAmt) {
       await interaction.deferReply({ ephemeral: true });
       return await interaction.editReply(
-        `You do not have ${donateAmt} coins in your balance`
+        `Vous n'avez pas ${donateAmt} Coins dans votre solde.`
       );
     }
 
@@ -45,7 +45,7 @@ module.exports = {
     if (!receiveUserData) {
       await interaction.deferReply({ ephemeral: true });
       return await interaction.editReply(
-        `${receiveUser.username} is not in the currency system.`
+        `${receiveUser.username} n'est pas dans le système monétaire.`
       );
     }
 
@@ -63,7 +63,7 @@ module.exports = {
     );
 
     interaction.editReply(
-      `You have donated ${donateAmt} coins to ${receiveUser.username}`
+      `Vous avez fait don de ${donateAmt} pièces à ${receiveUser.username}`
     )
   },
 };
