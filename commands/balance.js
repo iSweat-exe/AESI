@@ -5,9 +5,9 @@ module.exports = {
     .setName("balance")
     .setDescription("Répond avec votre solde"),
   async execute(interaction, profileData) {
+    const { id } = interaction.user;
     const { balance } = profileData;
-    const username = interaction.user.username;
 
-    await interaction.reply(`${username} possède ${balance} pièces`);
+    await interaction.reply(`<@${id}> possède **${balance} pièces**`);
   },
 };

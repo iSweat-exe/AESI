@@ -22,10 +22,11 @@ module.exports = {
         .setName("amount")
         .setDescription("Quantité de pièces à parier")
         .setRequired(true)
+        .setMinValue(1)
     ),
   async execute(interaction, profileData) {
     const { id } = interaction.user;
-    const { machineLastUsed, balance, totalSpent } = profileData;
+    const { balance, totalSpent } = profileData;
 
     const amount = interaction.options.getInteger("amount");
 
