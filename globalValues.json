@@ -1,5 +1,7 @@
 {
     "dailyMin": 1,
     "dailyMax": 1000,
-    "coinflipReward": 100
+    "coinflipReward": 100,
+    "fixedAmount": 500,
+    "scratchGainAmount": 10000
 }

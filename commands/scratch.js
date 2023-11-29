@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require("discord.js");
 const { EmbedBuilder } = require("@discordjs/builders");
 const profileModel = require("../models/profileSchema");
+const globalValues = require("../globalValues.json");
 
 function generateResult(probability, emojis) {
   const result = Array.from({ length: 3 }, () => {
@@ -15,19 +16,14 @@ function generateResult(probability, emojis) {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("machine")
-    .setDescription("Play the slot machine")
-    .addIntegerOption((option) =>
-      option
-        .setName("amount")
-        .setDescription("Amount of coins to bet")
-        .setRequired(true)
-    ),
+    .setName("scratch")
+    .setDescription("Price : 500 Coins"),
   async execute(interaction, profileData) {
     const { id } = interaction.user;
-    const { machineLastUsed, balance, totalSpent } = profileData;
+    const { totalSpent, balance } = profileData;
 
-    const amount = interaction.options.getInteger("amount");
+    // Utilise la valeur fixe définie dans globalValues.json
+    const amount = globalValues.fixedAmount;
 
     if (amount <= 0 || amount > balance) {
       return await interaction.reply("Invalid amount of coins.");
@@ -44,16 +40,13 @@ module.exports = {
           balance: -amount,
           totalSpent: amount,
         },
-        $set: {
-          machineLastUsed: Date.now(),
-        },
       }
     );
 
-    const winProbability = 0.25; // Probabilité de gagner est de 25%
-
-    const emojis = ["🍒", "🍊", "🍇"];
+    const winProbability = 0.01; // Probabilité de gagner est de 0.01%
+    const emojis = ["||🍒||", "||🍊||", "||🍇||"];
     const result = generateResult(winProbability, emojis);
+    const scratchGainAmount = globalValues.scratchGainAmount;
 
     const isWin = result.every((emoji) => emoji === result[0]);
 
@@ -66,23 +59,27 @@ module.exports = {
         },
         {
           $inc: {
-            balance: amount * 2,
+            balance: scratchGainAmount,
           },
         }
       );
 
       machineEmbed
-        .setColor(0x00ff00)
-        .setTitle("Slot machine result : **You WIN !**")
+        .setColor(0x0000ff)
+        .setTitle("**🎟️ Scratch Games 🎟️**")
         .setDescription(
-          `**Jackpot!**\n\n${result.join(" ")}\n\nYou **won +${amount} coins**.`
+          `**Click on the ||*Exemple*|| for view the result**\n\n${result.join(
+            " "
+          )}\n\n||You win .||`
         );
     } else {
       machineEmbed
-        .setColor(0xff0000)
-        .setTitle("Slot machine result : **You LOST !**")
+        .setColor(0x0000ff)
+        .setTitle("**🎟️ Scratch Games 🎟️**")
         .setDescription(
-          `**No luck...**\n\n${result.join(" ")}\n\nYou **lost ${amount} coins**.`
+          `**Click on the ||*Exemple*|| for view the result**\n\n${result.join(
+            " "
+          )}\n\n||You lost.||`
         );
     }
 

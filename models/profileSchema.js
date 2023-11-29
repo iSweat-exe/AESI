@@ -7,6 +7,7 @@ const profileSchema = new mongoose.Schema({
   dailyLastUsed: { type: Number, default: 0 },
   coinflipLastUsed: { type: Number, default: 0 },
   reportCount: { type: Number, default: 0 },
+  totalSpent: { type: Number, default: 0 },
 });
 
 const model = mongoose.model("aesidb", profileSchema);
