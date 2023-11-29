@@ -21,7 +21,7 @@ module.exports = {
     const { id } = interaction.user;
     const { coinflipLastUsed } = profileData;
 
-    const cooldown = 3600000; // 1 hour cooldown
+    const cooldown = 3600000;
     const timeLeft = cooldown - (Date.now() - coinflipLastUsed);
 
     if (timeLeft > 0) {
@@ -45,7 +45,7 @@ module.exports = {
       }
     );
 
-    const randomNum = Math.round(Math.random()); // between 0 and 1
+    const randomNum = Math.round(Math.random());
     const result = randomNum ? "Pile" : "Face";
     const choice = interaction.options.getString("choice");
 

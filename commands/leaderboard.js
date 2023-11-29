@@ -37,9 +37,8 @@ module.exports = {
         member = await interaction.guild.members.fetch(topTen[i].userId);
       } catch (error) {
         console.error(`Error fetching member with ID ${topTen[i].userId}: ${error.message}`);
-        // Supprimer l'utilisateur de la base de données s'il est inconnu
         await profileModel.findOneAndDelete({ userId: topTen[i].userId });
-        continue; // Passer à l'itération suivante du boucle
+        continue;
       }
 
       if (!member) continue;

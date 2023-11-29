@@ -35,7 +35,6 @@ module.exports = {
       );
 
       if (userReportCount.reportCount >= 10) {
-        // Bannir l'utilisateur et envoyer un message dans la console
         await interaction.guild.members.ban(userId, {
           reason: "Limite de rapport dépassée.",
         });
@@ -53,7 +52,6 @@ module.exports = {
     const developerId = "1138590489176707093";
     const developer = await interaction.client.users.fetch(developerId);
 
-    // Envoyer le rapport au développeur avec l'information du nombre de rapports
     developer.send(`**Rapport :** ${type}\n**Informations :** ${commentaire}\n**Utilisateur :** ${user.tag}\n**Rapports :** ${userReportCount.reportCount} /10`);
 
     await interaction.reply(

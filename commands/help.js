@@ -35,7 +35,6 @@ module.exports = {
         name: "/donate",
         description: "Don à un utilisateur.",
       },
-      // Ajoutez d'autres commandes ici
     ];
 
     const embed = new EmbedBuilder()

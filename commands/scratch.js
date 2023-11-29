@@ -22,7 +22,6 @@ module.exports = {
     const { id } = interaction.user;
     const { totalSpent, balance } = profileData;
 
-    // Utilise la valeur fixe définie dans globalValues.json
     const amount = globalValues.fixedAmount;
 
     if (amount <= 0 || amount > balance) {
