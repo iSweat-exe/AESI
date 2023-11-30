@@ -46,6 +46,11 @@ CLIENT_ID = <Your bot ID>
 MONGODB_SRV = <Your URL connect - MongoDB> 
 ```
 
+### How to have a URL ?
+
+<img src="TUTO-IMG/step-1.png" alt="Example Image" width="500"/><br />
+<img src="TUTO-IMG/step-2.png" alt="Example Image" width="456"/>
+
 # Support 🤝
 
 - Join the [Discord](https://discord.gg/)

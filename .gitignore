@@ -1,2 +1,4 @@
 # Ignore .env files
 .env
+# Ignore TUTO-IMG folder
+./TUTO-IMG
