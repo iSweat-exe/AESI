@@ -2,6 +2,7 @@ require("dotenv").config();
 const fs = require("node:fs");
 const path = require("node:path");
 const mongoose = require("mongoose");
+const profileModel = require("./models/profileSchema");
 
 const { DISCORD_TOKEN: token, MONGODB_SRV: database } = process.env;
 

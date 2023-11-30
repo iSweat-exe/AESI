@@ -13,6 +13,7 @@
     "discord.js": "^14.14.1",
     "dotenv": "^16.3.1",
     "mongoose": "^8.0.1",
+    "node-cron": "^3.0.3",
     "parse-ms-2": "^1.0.0"
   },
   "devDependencies": {

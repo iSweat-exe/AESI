@@ -1,0 +1,2 @@
+npm install canvas@^2.11.2 discord.js@^14.14.1 dotenv@^16.3.1 mongoose@^8.0.1 parse-ms-2@^1.0.0 --save
+npm install eslint@^8.54.0 --save-dev

@@ -1,0 +1,39 @@
+/quest list
+message du bot : 
+"
+Voici vos quetes quotidienne <@{id}> !
+- Executer la commande /balance 10 fois (<CountBalance>/10)
+- Gagné 1000 coins en plus dans votre balance. (<earnToday>/1000)
+"
+
+/lottery info
+/lottery play
+/lottery dateTime (executable que par un admin)
+
+message du bot (/lottery info) : 
+sous format d'un embed discord
+"
+Il y a actuellement <Participant Number> a la lottery
+le prix de 1 ticket et de <TicketPrice>$
+le gain total est de <<Participant Number * <TicketPrice>> !
+
+Pour acheter un ticket cliquer sur le boutton "Acheter un Ticket (<TicketPrice>$)"
+"
+
+message du bot /lottery play:
+sous format d'un embed discord
+"
+Le tirage au sort s'effectura le <TimeRewardLottery> !
+l'argent sera automatiquement versé dans votre /balance !
+"
+
+/lottery dateTime :
+Syntaxe /lottery dateTime <Taper une date en XX/XX/XXXX>.
+"
+message du bot /lottery dateTime:
+sous format d'un embed discord
+"
+Succes !
+La date du prochain tirage et : <Date>
+Le /lottery est ouvert !
+"
