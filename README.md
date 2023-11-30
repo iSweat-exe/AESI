@@ -48,8 +48,8 @@ MONGODB_SRV = <Your URL connect - MongoDB>
 
 ### How to have a URL ?
 
-<img src="TUTO-IMG/step-1.png" alt="Example Image" width="500"/><br />
-<img src="TUTO-IMG/step-2.png" alt="Example Image" width="456"/>
+<img src="Tutorial Images/step-1.png" alt="Example Image" width="500"/><br />
+<img src="Tutorial Images/step-2.png" alt="Example Image" width="456"/>
 
 # Support 🤝
 
