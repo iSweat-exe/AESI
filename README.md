@@ -12,9 +12,18 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
 
 ## Commands
 
-- `/daily` : Redeem your daily reward.
-- `/balance` : Check your current balance.
-- `/donate @username <amount>` : Donate commands
+- `/admin add <user> <amount>` : Add coins from users balance.
+- `/admin substract <user> <amount>` : Substract coins from users balance.
+- `/balance <player>` : Check your current balance or another player.
+- `/coinflip <heads or tails>` : Play a coinflip.
+- `/daily` : Claim your daily rewards.
+- `/donate <user> <amount>` : Donate to the user.
+- `/help` : Get help with all of the commands.
+- `/leaderboard` : Check the leaderboard (Top 10).
+- `/machine <amount>` : Play a slot machine.
+- `/report <type> <comment>` : Report a bug or suggestion.
+- `/scratch` : Play a scratch card.
+- `/stats` : Check your account stats.
 
 ## Installation
 
