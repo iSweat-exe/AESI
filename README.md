@@ -45,3 +45,10 @@ CLIENT_ID = <Your bot ID>
 
 MONGODB_SRV = <Your URL connect - MongoDB> 
 ```
+
+# Support
+
+- [Discord](https://discord.gg/)
+- [GitHub](https://github.com/isweat-exe/AESI)
+
+Follow me on [Github](https://github.com/isweat-exe) ❤️
