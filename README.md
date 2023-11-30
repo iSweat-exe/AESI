@@ -49,4 +49,4 @@ MONGODB_SRV = <Your URL connect - MongoDB>
 # Support
 
 - Join the [Discord](https://discord.gg/)
-- Follow me on[GitHub](https://github.com/isweat-exe) ❤️
+- Follow me on [GitHub](https://github.com/isweat-exe) ❤️
