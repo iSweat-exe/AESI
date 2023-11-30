@@ -1,8 +1,8 @@
-# What is AESI ?
+# What is AESI ? 🤖
 
 AESI is a feature-rich Discord bot designed to bring an advanced economy system to your server, complete with various mini-games and more.
 
-## Features 
+## Features 🎉
 
 - **Economy System:** Build and manage your virtual wealth with a sophisticated economy system.
 - **Daily Rewards:** Claim your daily rewards to earn coins and bonuses.
@@ -27,7 +27,7 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
 - `/scratch` : Play a scratch card.
 - `/stats` : Check your account stats.
 
-## Installation
+## Installation 🎉
 
 1. Clone the repository:
 
