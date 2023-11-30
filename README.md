@@ -35,7 +35,7 @@ AESI is a feature-rich Discord bot designed to bring an advanced economy system 
    git clone https://github.com/isweat-exe/AESI.git
    ```
 
-## Configuration
+## Configuration 📊
 
 Add .env file in AESI folder, and copy this :
 ```env
@@ -46,7 +46,7 @@ CLIENT_ID = <Your bot ID>
 MONGODB_SRV = <Your URL connect - MongoDB> 
 ```
 
-# Support
+# Support 🤝
 
 - Join the [Discord](https://discord.gg/)
 - Follow me on [GitHub](https://github.com/isweat-exe) ❤️
