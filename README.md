@@ -2,15 +2,17 @@
 
 AESI is a feature-rich Discord bot designed to bring an advanced economy system to your server, complete with various mini-games and more.
 
-## Features
+## Features 
 
 - **Economy System:** Build and manage your virtual wealth with a sophisticated economy system.
 - **Daily Rewards:** Claim your daily rewards to earn coins and bonuses.
 - **Mini-Games:** Engage in entertaining mini-games to earn extra rewards.
 - **Bug Reporting:** Users can report bugs directly to improve the bot.
 - **User-Friendly Commands:** Simple and intuitive commands for a smooth user experience.
+- **Leaderboard:** Keep track of the top players and their balances.
+- **Statistics:** Track your account balance and other statistics.
 
-## Commands
+## Commands (/)
 
 - `/admin add <user> <amount>` : Add coins from users balance.
 - `/admin substract <user> <amount>` : Substract coins from users balance.
