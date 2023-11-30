@@ -48,7 +48,5 @@ MONGODB_SRV = <Your URL connect - MongoDB>
 
 # Support
 
-- [Discord](https://discord.gg/)
-- [GitHub](https://github.com/isweat-exe/AESI)
-
-Follow me on [Github](https://github.com/isweat-exe) ❤️
+- Join the [Discord](https://discord.gg/)
+- Follow me on[GitHub](https://github.com/isweat-exe) ❤️
