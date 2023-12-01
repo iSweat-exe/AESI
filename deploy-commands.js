@@ -1,10 +1,10 @@
-const { config } = require("dotenv");
+require("dotenv").config();
 const { REST, Routes } = require("discord.js");
 const {
   CLIENT_ID: clientId,
   GUILD_ID: guildId,
   DISCORD_TOKEN: token,
-} = config({ path: "param.env" }).parsed;
+} = process.env;
 const fs = require("node:fs");
 
 const commands = [];
