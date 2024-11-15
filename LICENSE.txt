@@ -11,3 +11,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+## Terms of Use:
+- **Commercial Use**: You are not authorized to use this project commercially unless you contact the author (iSweat) and obtain explicit written permission.
+- **Modification**: You are not authorized to modify this project unless you contact the author (iSweat) and obtain explicit written permission.
+- **Removal of Author Attribution**: You are not authorized to remove or alter the mention of the original creator (iSweat) unless you contact the author and obtain explicit written permission.
+- **Redistribution**: You are not authorized to redistribute, share, or transfer this project to third parties unless you have obtained explicit permission from the author (iSweat).
+
+Any unauthorized use, modification, redistribution, or removal of attribution will result in legal action.
+
+## Consequences of Violating the Terms:
+If you violate these terms, including unauthorized commercial use, modification, or redistribution, legal action may be taken against you. This could include seeking damages for any losses incurred and requiring the removal of any unauthorized versions of the project.
+
+## How to Request Permission:
+To request permission for any of the actions above (commercial use, modification, redistribution, or removal of attribution), please contact the author (iSweat) via [Discord: isweatmc, or GitHub issues page].
+
+All decisions regarding the granting of permission are at the sole discretion of the author.
